@@ -24,7 +24,7 @@ terá atributos como título, autor, gênero e quantidade disponível.
 - Função para listar todos os livros
 - Função para buscar um livro pelo título
 
-Passo 4: Utilizar a biblioteca Matplotlib para gerar um gráfico
+### Passo 4: Utilizar a biblioteca Matplotlib para gerar um gráfico
 - Instalação da Matplotlib
 - Gerar o gráfico de quantidade de livros por gênero
 
