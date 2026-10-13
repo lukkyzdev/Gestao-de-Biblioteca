@@ -1,57 +1,40 @@
-  # <img align="center" alt="Fontes-Python" height="35" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"> ATIVIDADE PRÁTICA - Desenvolver um Sistema Simples de Gerenciamento de Livros Em Uma Biblioteca
+# <img align="center" alt="Python" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"> Gestão de Biblioteca | Python OOP & Data Visualization
+
+Um sistema de gestão de acervo literário desenvolvido em Python. O projeto funciona como um mini-CRUD (Create, Read, Update, Delete) operando em memória, unindo os fundamentos de **Programação Orientada a Objetos (POO)** com a **Visualização de Dados**.
+
+## 🎯 Objetivo do Projeto
+O desenvolvimento deste sistema teve como foco a criação de uma arquitetura de código limpa e modular. O objetivo foi validar a capacidade de estruturar dados complexos através de objetos e, em seguida, extrair métricas visuais desses mesmos dados.
+- Consolidação dos pilares de Orientação a Objetos em Python (Classes, Instâncias e Atributos).
+- Implementação de algoritmos de busca e listagem iterativa sobre coleções de dados (Listas).
+- Integração de bibliotecas externas para geração de relatórios visuais baseados no estado da aplicação.
+
+## 💻 Tecnologias e Arquitetura Aplicada
+- **Python (Core):** Linguagem base utilizada para a lógica de negócio.
+- **POO (Modelagem):** Criação da classe `Livro` para encapsular a estrutura de dados (Título, Autor, Gênero, Quantidade).
+- **Matplotlib:** Biblioteca de visualização gráfica importada para processar a distribuição do acervo e renderizar gráficos analíticos.
+
+## 🚀 Como Funciona a Lógica
+A aplicação é gerida através de funções específicas que manipulam a base de dados (uma Lista em memória que atua como a "estante" da biblioteca):
+1. **Cadastro e Ingestão:** A função `cadastrar_livro()` instancia novos objetos da classe `Livro` e anexa-os à lista principal.
+2. **Consultas (Read & Search):** Funções dedicadas para varrer a lista e exibir o acervo completo (`listar_livros()`) ou isolar um registo específico através de validação de Strings (`buscar_livro()`).
+3. **Geração de Insights (Gráficos):** A função `gerar_grafico()` contabiliza a frequência de cada categoria (Gênero) dentro da lista de objetos e utiliza o Matplotlib para plotar um gráfico de barras, oferecendo uma visão imediata da distribuição do acervo.
+
+## 📊 Execução e Demonstração Visual
+
+Abaixo, é possível visualizar o resultado da execução do script, apresentando as listagens no terminal de comandos e a renderização do gráfico de distribuição:
+
+> **Painel de Execução e Gráfico de Acervo:**
+> 
+> ![Código em Execução](./images/resultado.png)
+
+> **Estrutura de Classes e Lógica do Código:**
+> 
+> ![Código 1](./images/code1.png)
+> ![Código 1.1](./images/code1.1.png)
+
+## 📂 Acesso ao Código Fonte
+Toda a modelagem da classe, funções de gestão e rotinas de plotagem podem ser analisadas no ficheiro principal:
+- [📄 SistemaSimplesDeGerenciamentoDeLivrosEmUmaBiblioteca.py](https://github.com/lukkyzdev/SistemaSimplesDeGerenciamentoDeLivrosEmUmaBiblioteca/blob/main/SistemaSimplesDeGerenciamentoDeLivrosEmUmaBiblioteca.py)
 
 ---
-
-*A recomendação da minha instituição foi utilizar o Google Colab para desenvolver o código e executá-lo.*
-
----
-
-## A ORIENTAÇÃO DO PROJETO FOI A SEGUINTE:
-
-Você foi contratado para desenvolver um sistema simples de gerenciamento de livros em uma
-biblioteca. O sistema deve permitir cadastrar novos livros, listar todos os livros disponíveis, buscar
-um livro pelo título, e gerar um gráfico com a quantidade de livros por gênero.
-
-### Passo 1: Definir a classe Livro
-- Comece definindo a estrutura básica de um livro usando uma classe em Python. Cada livro
-terá atributos como título, autor, gênero e quantidade disponível.
-
-### Passo 2: Criar a lista de livros
-- Inicialize uma lista vazia para armazenar os livros que serão cadastrados.
-
-### Passo 3: Implementar funções para gerenciar os livros
-- Função para cadastrar um novo livro
-- Função para listar todos os livros
-- Função para buscar um livro pelo título
-
-### Passo 4: Utilizar a biblioteca Matplotlib para gerar um gráfico
-- Instalação da Matplotlib
-- Gerar o gráfico de quantidade de livros por gênero
-
-### Passo 5: Testar o sistema
-
----
-
-## Vamos começar mostrando meu código por completo!
-
-Você pode acompanhar pela imagem abaixo ou pelo arquivo aqui no github ---> [Arquivo do Projeto](https://github.com/lukkyzdev/SistemaSimplesDeGerenciamentoDeLivrosEmUmaBiblioteca/blob/main/SistemaSimplesDeGerenciamentoDeLivrosEmUmaBiblioteca.py)
-
-![Código 1](./images/code1.png)
-
-![Código 1.1](./images/code1.1.png)
-
-## Execução do Código e Explicações
-
-❗ **AVISO:** ❗ **Antes de mais nada, venho comunicar que solicitei sim auxílio de inteligências em partes que eu estava em dúvida (mas somente na dúvida), lembrando que esse é meu segundo código em Python e ainda não sou muito experiente.**
-
-***Esse código implementa um sistema simples de gerenciamento de livros em Python, usando conceitos de programação orientada a objetos, listas e visualização de dados.***
-
-- *Primeiro, é criada a classe **Livro**, que representa a estrutura de um livro, contendo atributos como título, autor, gênero e quantidade. Cada vez que um livro é cadastrado, um objeto dessa classe é instanciado e adicionado a uma lista chamada **livros**, que funciona como a estante da biblioteca.*
-
-- *Para manipular essa lista, o sistema conta com funções específicas: a de cadastro **(cadrastrar_livro)** que solicita os dados ao usuário e cria um novo objeto, a de listagem **(listar_livros)** que percorre a lista exibindo todos os livros cadastrados, e a de busca **(buscar_livro)** que percorre a lista comparando o título informado com os existentes, retornando o livro se encontrado.*
-
-- *Além disso, há a função **gerar_grafico**, que utiliza a biblioteca Matplotlib para contar quantos livros existem em cada gênero e exibir um gráfico de barras com essas informações, oferecendo uma visão clara da distribuição dos livros. No final, dentro do bloco **if __name__ == "__main__":**, o código insere alguns livros manualmente na lista e chama as funções de listagem, busca e geração de gráfico, funcionando como uma simulação prática de uso do sistema*
-
-***O programa basicamente mostra, de forma prática, como criar e mexer com objetos, dados e gráficos, funcionando como um mini CRUD dentro de uma biblioteca.***
-
-![Código em Execução](./images/resultado.png)
+*Desenvolvido por Lucas Fontes com foco na aplicação de metodologias orientadas a objetos e análise visual de dados em Python.*
